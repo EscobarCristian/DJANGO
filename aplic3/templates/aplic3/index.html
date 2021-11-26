@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+	 <head>
+	 </head>
+	 <style type="text/css">	
+	 body{
+    	background:url('{% static "aplic3/diego.jpg"  %}') no-repeat;
+		min-height:100%;
+		background-size:cover;
+
+		}
+	 	
+	 </style>
+	  <body text="white" >
+	  	    
+	  	    <br>	
+	  	    <h1><i><center>Listado de Personas y su club</center></i></h1><br>
+
+		    {% for persona in persona_list %}
+
+				   <h2> {{ persona.nombre }} <b>{{ persona.apellido }}</b> </h2>
+				   <p> {{ persona.club }} </p> <p> {{ persona.email }} </p> <p> {{ persona.dni }} </p><br>
+			{% endfor %}
+			
+
+
+			
+	  </body>
+</html
